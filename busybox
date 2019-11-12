@@ -1,0 +1,7 @@
+FROM busybox
+LABEL AUTHOR=vmarkau
+WORKDIR /data 
+COPY test_file1 /data
+COPY test_arch.tar /data
+RUN  tar -xf /data/test_arch.tar
+ENV MAINTAINER=vitali_markau
